@@ -23,7 +23,7 @@ def get_citations_needed_report(url):
     sections = ""
     for x in report:
         string += ("\x1B[3m" + "Section:\n" + "\x1B[0m" + x.find_previous("h3").get_text()
-                   + ":\n" + "\x1B[3m" + "Entry: \n" + "\x1B[0m" +  x.parent.get_text() + "\n")
+                   + ":\n" + "\x1B[3m" + "Entry: \n" + "\x1B[0m" + x.parent.get_text() + "\n")
 
         sections += x.find_previous("h3").get_text() + "\n"
     string = string.replace("[edit]:", "")
